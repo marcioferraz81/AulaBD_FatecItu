@@ -30,5 +30,18 @@ namespace AulaBD_FatecItu
                 frm.Show();
             }
         }
+
+        private void itemCategoriaListar_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<FrmCategoriaListar>().Count() > 0)
+            {
+                Application.OpenForms.OfType<FrmCategoriaListar>().First().Focus();
+            }
+            else
+            {
+                FrmCategoriaListar frm = new FrmCategoriaListar();
+                frm.Show();
+            }
+        }
     }
 }

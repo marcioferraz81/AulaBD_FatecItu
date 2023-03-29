@@ -89,6 +89,12 @@
     <Compile Include="FrmCategoriaCadastrar.Designer.cs">
       <DependentUpon>FrmCategoriaCadastrar.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCategoriaListar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCategoriaListar.Designer.cs">
+      <DependentUpon>FrmCategoriaListar.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -99,6 +105,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FrmCategoriaCadastrar.resx">
       <DependentUpon>FrmCategoriaCadastrar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCategoriaListar.resx">
+      <DependentUpon>FrmCategoriaListar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
