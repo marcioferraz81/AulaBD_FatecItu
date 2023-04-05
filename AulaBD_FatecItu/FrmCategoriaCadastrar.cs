@@ -22,14 +22,14 @@ namespace AulaBD_FatecItu
         {
             Categoria cat = new Categoria();
             cat.Nome = txtNome.Text;
-            Categoria.salvar(cat);
+            MessageBox.Show(Categoria.salvar(cat));
         }
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-            Categoria cat = new Categoria();
+             Categoria cat = new Categoria();
             cat.Nome = txtNome.Text;
-            Categoria.salvar(cat);
+            MessageBox.Show(Categoria.salvar(cat));
         }
     }
 }
