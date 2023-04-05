@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AulaBD_FatecItu.Class;
 
 namespace AulaBD_FatecItu
 {
@@ -33,15 +34,7 @@ namespace AulaBD_FatecItu
 
         private void itemCategoriaListar_Click(object sender, EventArgs e)
         {
-            if (Application.OpenForms.OfType<FrmCategoriaListar>().Count() > 0)
-            {
-                Application.OpenForms.OfType<FrmCategoriaListar>().First().Focus();
-            }
-            else
-            {
-                FrmCategoriaListar frm = new FrmCategoriaListar();
-                frm.Show();
-            }
+            MessageBox.Show(Categoria.listar());
         }
     }
 }
