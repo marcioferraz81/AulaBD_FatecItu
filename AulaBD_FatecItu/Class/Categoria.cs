@@ -17,7 +17,7 @@ namespace AulaBD_FatecItu.Class
         public int Id { get => id; set => id = value; }
         public string Nome { get => nome; set => nome = value; }
 
-        public static void salvar(Categoria c)
+        public static string salvar(Categoria c)
         {
             try
             {
@@ -26,11 +26,31 @@ namespace AulaBD_FatecItu.Class
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nome", c.Nome);
                 cmd.ExecuteNonQuery();
+                return "salvo com sucesso";
             }
             catch (Exception e)
             {
-                throw e;
+                return "erro: " + e.Message;
             }
+        }
+
+        public static string listar()
+        {
+            MySqlConnection conn = Conexao.obterConexao();
+            string sql = "SELECT * FROM categoria";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader res = cmd.ExecuteReader();
+            string lista = "Lista de categorias \n";
+            if (res.HasRows)
+            {
+                while (res.Read())
+                {
+                    lista += "ID: " + res["id"].ToString();
+                    lista += " - Nome: " + res["nome"].ToString();
+                    lista += "\n";
+                }
+            }
+            return lista;
         }
     }
 }
