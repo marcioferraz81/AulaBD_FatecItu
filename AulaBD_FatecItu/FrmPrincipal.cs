@@ -36,5 +36,18 @@ namespace AulaBD_FatecItu
         {
             MessageBox.Show(Categoria.listar());
         }
+
+        private void itemCategoriaConsultar_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<FrmCategoriaConsultar>().Count() > 0)
+            {
+                Application.OpenForms.OfType<FrmCategoriaConsultar>().First().Focus();
+            }
+            else
+            {
+                FrmCategoriaConsultar frm = new FrmCategoriaConsultar();
+                frm.Show();
+            }
+        }
     }
 }

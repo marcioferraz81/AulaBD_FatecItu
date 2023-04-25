@@ -32,6 +32,7 @@
             this.menuCategoria = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCategoriaCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCategoriaListar = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemCategoriaConsultar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -49,7 +50,8 @@
             // 
             this.menuCategoria.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.itemCategoriaCadastrar,
-            this.itemCategoriaListar});
+            this.itemCategoriaListar,
+            this.itemCategoriaConsultar});
             this.menuCategoria.Name = "menuCategoria";
             this.menuCategoria.Size = new System.Drawing.Size(70, 20);
             this.menuCategoria.Text = "Categoria";
@@ -67,6 +69,13 @@
             this.itemCategoriaListar.Size = new System.Drawing.Size(180, 22);
             this.itemCategoriaListar.Text = "Listar";
             this.itemCategoriaListar.Click += new System.EventHandler(this.itemCategoriaListar_Click);
+            // 
+            // itemCategoriaConsultar
+            // 
+            this.itemCategoriaConsultar.Name = "itemCategoriaConsultar";
+            this.itemCategoriaConsultar.Size = new System.Drawing.Size(180, 22);
+            this.itemCategoriaConsultar.Text = "Consultar";
+            this.itemCategoriaConsultar.Click += new System.EventHandler(this.itemCategoriaConsultar_Click);
             // 
             // FrmPrincipal
             // 
@@ -89,6 +98,7 @@
         private System.Windows.Forms.ToolStripMenuItem menuCategoria;
         private System.Windows.Forms.ToolStripMenuItem itemCategoriaCadastrar;
         private System.Windows.Forms.ToolStripMenuItem itemCategoriaListar;
+        private System.Windows.Forms.ToolStripMenuItem itemCategoriaConsultar;
     }
 }
 
