@@ -27,7 +27,7 @@ namespace AulaBD_FatecItu
 
         private void btnSalvar_Click(object sender, EventArgs e)
         {
-             Categoria cat = new Categoria();
+            Categoria cat = new Categoria();
             cat.Nome = txtNome.Text;
             MessageBox.Show(Categoria.salvar(cat));
         }

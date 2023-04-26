@@ -52,5 +52,25 @@ namespace AulaBD_FatecItu.Class
             }
             return lista;
         }
+
+        public static Boolean pesquisar(Categoria c)
+        {
+            MySqlConnection conn = Conexao.obterConexao();
+            string sql = "SELECT * FROM categoria WHERE id = @id";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            cmd.Parameters.AddWithValue("@id", c.Id);
+            MySqlDataReader res = cmd.ExecuteReader();
+            Boolean verificar = false;
+            if (res.HasRows)
+            {
+                if (res.Read())
+                {
+                    c.Id = Int32.Parse(res["id"].ToString());
+                    c.Nome = res["nome"].ToString();
+                    verificar = true;
+                }
+            }
+            return verificar;
+        }
     }
 }

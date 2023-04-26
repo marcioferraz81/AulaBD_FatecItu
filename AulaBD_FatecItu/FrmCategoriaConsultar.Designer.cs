@@ -28,38 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnanterior = new System.Windows.Forms.Button();
-            this.btnproximo = new System.Windows.Forms.Button();
+            this.btnpesquisar = new System.Windows.Forms.Button();
             this.txtnome = new System.Windows.Forms.TextBox();
             this.lblid = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // btnanterior
+            // btnpesquisar
             // 
-            this.btnanterior.Location = new System.Drawing.Point(34, 86);
-            this.btnanterior.Name = "btnanterior";
-            this.btnanterior.Size = new System.Drawing.Size(75, 23);
-            this.btnanterior.TabIndex = 0;
-            this.btnanterior.Text = "<< =";
-            this.btnanterior.UseVisualStyleBackColor = true;
-            this.btnanterior.Click += new System.EventHandler(this.btnanterior_Click);
-            // 
-            // btnproximo
-            // 
-            this.btnproximo.Location = new System.Drawing.Point(115, 86);
-            this.btnproximo.Name = "btnproximo";
-            this.btnproximo.Size = new System.Drawing.Size(75, 23);
-            this.btnproximo.TabIndex = 1;
-            this.btnproximo.Text = "= >>";
-            this.btnproximo.UseVisualStyleBackColor = true;
-            this.btnproximo.Click += new System.EventHandler(this.btnproximo_Click);
+            this.btnpesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnpesquisar.Location = new System.Drawing.Point(247, 79);
+            this.btnpesquisar.Name = "btnpesquisar";
+            this.btnpesquisar.Size = new System.Drawing.Size(143, 43);
+            this.btnpesquisar.TabIndex = 1;
+            this.btnpesquisar.Text = "Pesquisar";
+            this.btnpesquisar.UseVisualStyleBackColor = true;
+            this.btnpesquisar.Click += new System.EventHandler(this.btnpesquisar_Click);
             // 
             // txtnome
             // 
-            this.txtnome.Location = new System.Drawing.Point(34, 48);
+            this.txtnome.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtnome.Location = new System.Drawing.Point(112, 36);
             this.txtnome.Name = "txtnome";
-            this.txtnome.Size = new System.Drawing.Size(167, 20);
-            this.txtnome.TabIndex = 2;
+            this.txtnome.ReadOnly = true;
+            this.txtnome.Size = new System.Drawing.Size(278, 26);
+            this.txtnome.TabIndex = 1;
             // 
             // lblid
             // 
@@ -70,15 +63,23 @@
             this.lblid.TabIndex = 3;
             this.lblid.Text = "ID";
             // 
+            // txtId
+            // 
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(34, 36);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(59, 26);
+            this.txtId.TabIndex = 0;
+            // 
             // FrmCategoriaConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(495, 259);
+            this.ClientSize = new System.Drawing.Size(432, 145);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtnome);
-            this.Controls.Add(this.btnproximo);
-            this.Controls.Add(this.btnanterior);
+            this.Controls.Add(this.btnpesquisar);
             this.Name = "FrmCategoriaConsultar";
             this.Text = "FrmCategoriaConsultar";
             this.ResumeLayout(false);
@@ -87,10 +88,9 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnanterior;
-        private System.Windows.Forms.Button btnproximo;
+        private System.Windows.Forms.Button btnpesquisar;
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

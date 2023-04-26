@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AulaBD_FatecItu.Class;
 
 namespace AulaBD_FatecItu
 {
@@ -17,14 +18,25 @@ namespace AulaBD_FatecItu
             InitializeComponent();
         }
 
-        private void btnanterior_Click(object sender, EventArgs e)
+        private void btnpesquisar_Click(object sender, EventArgs e)
         {
+            Categoria cat = new Categoria();
+            cat.Id = Int32.Parse(txtId.Text);
+            //txtnome.Text = Categoria.pesquisar(cat) ? cat.Nome : "Não encontrado!";
 
-        }
-
-        private void btnproximo_Click(object sender, EventArgs e)
-        {
-
+            if (Categoria.pesquisar(cat))
+            {
+                txtnome.BackColor = Color.White;
+                txtnome.ForeColor = Color.Black;
+                txtnome.Text = cat.Nome;
+            }
+            else
+            {
+                txtnome.BackColor = Color.Red;
+                txtnome.ForeColor = Color.White;
+                txtnome.Text = "Não encontrado!";
+            }
+            txtId.Focus();
         }
     }
 }
