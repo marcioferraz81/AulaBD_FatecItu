@@ -29,13 +29,47 @@ namespace AulaBD_FatecItu
                 txtnome.BackColor = Color.White;
                 txtnome.ForeColor = Color.Black;
                 txtnome.Text = cat.Nome;
+                btnExcluir.Enabled = true;
             }
             else
             {
                 txtnome.BackColor = Color.Red;
                 txtnome.ForeColor = Color.White;
                 txtnome.Text = "Não encontrado!";
+                btnExcluir.Enabled = false;
+
             }
+            txtId.Focus();
+        }
+
+        private void btnExcluir_Click(object sender, EventArgs e)
+        {
+            string message = "Deseja realmente excluir o registro?";
+            string caption = "Exclusão de registro";
+            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+            DialogResult result;
+
+            result = MessageBox.Show(message, caption, buttons);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Categoria cat = new Categoria();
+                MessageBox.Show(cat.excluir(txtId.Text));
+                //limpar();
+            }
+            else
+            {
+                MessageBox.Show("Cancelado");
+            }
+
+            limpar();
+
+        }
+
+        private void limpar()
+        {
+            txtId.Clear();
+            txtnome.Clear();
             txtId.Focus();
         }
     }
