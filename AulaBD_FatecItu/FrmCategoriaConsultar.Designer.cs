@@ -32,6 +32,7 @@
             this.txtnome = new System.Windows.Forms.TextBox();
             this.lblid = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
+            this.btnExcluir = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnpesquisar
@@ -71,11 +72,24 @@
             this.txtId.Size = new System.Drawing.Size(59, 26);
             this.txtId.TabIndex = 0;
             // 
+            // btnExcluir
+            // 
+            this.btnExcluir.Enabled = false;
+            this.btnExcluir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExcluir.Location = new System.Drawing.Point(112, 79);
+            this.btnExcluir.Name = "btnExcluir";
+            this.btnExcluir.Size = new System.Drawing.Size(118, 43);
+            this.btnExcluir.TabIndex = 4;
+            this.btnExcluir.Text = "Excluir";
+            this.btnExcluir.UseVisualStyleBackColor = true;
+            this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
+            // 
             // FrmCategoriaConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(432, 145);
+            this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.txtnome);
@@ -92,5 +106,6 @@
         private System.Windows.Forms.TextBox txtnome;
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Button btnExcluir;
     }
 }
