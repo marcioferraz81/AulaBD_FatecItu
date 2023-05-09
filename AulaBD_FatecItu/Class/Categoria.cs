@@ -90,5 +90,24 @@ namespace AulaBD_FatecItu.Class
                 return "erro: " + e.Message;
             }
         }
+
+        public static string editar(Categoria c)
+        {
+            try
+            {
+                MySqlConnection conn = Conexao.obterConexao();
+                string sql = "UPDATE categoria SET nome = @nome WHERE id = @id";
+                //com mais atributos -> UPDATE categoria SET nome = @nome, ramal = @ramal WHERE id = @id
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@nome", c.Nome);
+                cmd.Parameters.AddWithValue("@id", c.Id);
+                cmd.ExecuteNonQuery();
+                return "salvo com sucesso";
+            }
+            catch (Exception e)
+            {
+                return "erro: " + e.Message;
+            }
+        }
     }
 }
