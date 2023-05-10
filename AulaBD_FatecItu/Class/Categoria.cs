@@ -23,10 +23,14 @@ namespace AulaBD_FatecItu.Class
         {
             try
             {
+                string sql = c.Id == 0 ?
+                    "INSERT INTO categoria VALUES (null, @nome)" :
+                    "UPDATE categoria SET nome = @nome WHERE id = @id";
+
                 MySqlConnection conn = Conexao.obterConexao();
-                string sql = "INSERT INTO categoria VALUES (null, @nome)";
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("@nome", c.Nome);
+                cmd.Parameters.AddWithValue("@id", c.Id);
                 cmd.ExecuteNonQuery();
                 return "salvo com sucesso";
             }

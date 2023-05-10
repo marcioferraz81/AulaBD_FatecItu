@@ -93,7 +93,8 @@ namespace AulaBD_FatecItu
                 Categoria cat = new Categoria();
                 cat.Id = Int32.Parse(txtId.Text);
                 cat.Nome = txtnome.Text;
-                MessageBox.Show(Categoria.editar(cat));
+                //MessageBox.Show(Categoria.editar(cat));
+                MessageBox.Show(Categoria.salvar(cat));
 
                 limpar();
             }
