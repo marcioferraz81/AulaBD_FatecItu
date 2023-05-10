@@ -33,6 +33,8 @@
             this.lblid = new System.Windows.Forms.Label();
             this.txtId = new System.Windows.Forms.TextBox();
             this.btnExcluir = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnCancelar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnpesquisar
@@ -84,11 +86,36 @@
             this.btnExcluir.UseVisualStyleBackColor = true;
             this.btnExcluir.Click += new System.EventHandler(this.btnExcluir_Click);
             // 
+            // btnEditar
+            // 
+            this.btnEditar.Enabled = false;
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Location = new System.Drawing.Point(112, 128);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(118, 43);
+            this.btnEditar.TabIndex = 5;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCancelar.Location = new System.Drawing.Point(247, 128);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(143, 43);
+            this.btnCancelar.TabIndex = 6;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
             // FrmCategoriaConsultar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(432, 145);
+            this.ClientSize = new System.Drawing.Size(432, 240);
+            this.Controls.Add(this.btnCancelar);
+            this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnExcluir);
             this.Controls.Add(this.txtId);
             this.Controls.Add(this.lblid);
@@ -107,5 +134,7 @@
         private System.Windows.Forms.Label lblid;
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnExcluir;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnCancelar;
     }
 }
