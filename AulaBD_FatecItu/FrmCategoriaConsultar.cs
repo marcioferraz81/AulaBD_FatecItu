@@ -30,7 +30,6 @@ namespace AulaBD_FatecItu
                 txtnome.ForeColor = Color.Black;
                 txtnome.Text = cat.Nome;
                 btnExcluir.Enabled = true;
-                btnEditar.Enabled = true;
             }
             else
             {
@@ -38,7 +37,6 @@ namespace AulaBD_FatecItu
                 txtnome.ForeColor = Color.White;
                 txtnome.Text = "Não encontrado!";
                 btnExcluir.Enabled = false;
-                btnEditar.Enabled = false;
 
             }
             txtId.Focus();
@@ -57,7 +55,8 @@ namespace AulaBD_FatecItu
             {
                 Categoria cat = new Categoria();
                 MessageBox.Show(cat.excluir(txtId.Text));
-                //limpar();
+
+                limpar();
             }
             else
             {
@@ -73,36 +72,6 @@ namespace AulaBD_FatecItu
             txtId.Clear();
             txtnome.Clear();
             txtId.Focus();
-            btnEditar.Enabled = false;
-            btnExcluir.Enabled = false;
-        }
-
-        private void btnEditar_Click(object sender, EventArgs e)
-        {
-            string message = "Deseja realmente editar o registro?";
-            string caption = "Edição de registro";
-            MessageBoxButtons buttons = MessageBoxButtons.YesNo;
-            DialogResult result;
-
-            result = MessageBox.Show(message, caption, buttons);
-
-            if (result == System.Windows.Forms.DialogResult.Yes)
-            {
-                if (txtnome.Text != "")
-                {
-                    Categoria cat = new Categoria();
-                    cat.Id = Int32.Parse(txtId.Text);
-                    cat.Nome = txtnome.Text;
-                    MessageBox.Show(Categoria.editar(cat));
-                    //limpar();
-                }
-            }
-            else
-            {
-                MessageBox.Show("Cancelado");
-            }
-
-            limpar();
         }
     }
 }
