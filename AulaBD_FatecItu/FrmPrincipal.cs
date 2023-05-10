@@ -49,5 +49,23 @@ namespace AulaBD_FatecItu
                 frm.Show();
             }
         }
+
+        private void itemProdutoCadastrar_Click(object sender, EventArgs e)
+        {
+            if (Application.OpenForms.OfType<FrmProdutoSalvar>().Count() > 0)
+            {
+                Application.OpenForms.OfType<FrmProdutoSalvar>().First().Focus();
+            }
+            else
+            {
+                FrmProdutoSalvar frm = new FrmProdutoSalvar();
+                frm.Show();
+            }
+        }
+
+        private void itemProdutoListar_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(Produto.listar());
+        }
     }
 }

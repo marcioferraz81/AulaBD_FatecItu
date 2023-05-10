@@ -36,7 +36,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(253, 141);
+            this.btnSalvar.Location = new System.Drawing.Point(203, 170);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(127, 39);
             this.btnSalvar.TabIndex = 0;
@@ -48,7 +48,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(74, 53);
+            this.lblNome.Location = new System.Drawing.Point(24, 15);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(66, 24);
             this.lblNome.TabIndex = 1;
@@ -57,7 +57,7 @@
             // txtNome
             // 
             this.txtNome.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNome.Location = new System.Drawing.Point(77, 87);
+            this.txtNome.Location = new System.Drawing.Point(27, 49);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(303, 29);
             this.txtNome.TabIndex = 2;

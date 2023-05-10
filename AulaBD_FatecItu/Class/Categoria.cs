@@ -1,9 +1,11 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Google.Protobuf.Collections;
 //add
 using MySql.Data.MySqlClient;
 
@@ -51,6 +53,16 @@ namespace AulaBD_FatecItu.Class
                 }
             }
             return lista;
+        }
+
+        public static MySqlDataReader carregar()
+        {
+            MySqlConnection conn = Conexao.obterConexao();
+            string sql = "SELECT * FROM categoria";
+            MySqlCommand cmd = new MySqlCommand(sql, conn);
+            MySqlDataReader res = cmd.ExecuteReader();
+
+            return res;
         }
 
         public static Boolean pesquisar(Categoria c)

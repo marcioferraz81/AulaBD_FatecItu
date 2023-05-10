@@ -33,13 +33,17 @@
             this.itemCategoriaCadastrar = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCategoriaListar = new System.Windows.Forms.ToolStripMenuItem();
             this.itemCategoriaConsultar = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuProduto = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemProdutoCadastrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.itemProdutoListar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuPrincipal.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPrincipal
             // 
             this.menuPrincipal.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuCategoria});
+            this.menuCategoria,
+            this.menuProduto});
             this.menuPrincipal.Location = new System.Drawing.Point(0, 0);
             this.menuPrincipal.Name = "menuPrincipal";
             this.menuPrincipal.Size = new System.Drawing.Size(800, 24);
@@ -77,6 +81,29 @@
             this.itemCategoriaConsultar.Text = "Consultar";
             this.itemCategoriaConsultar.Click += new System.EventHandler(this.itemCategoriaConsultar_Click);
             // 
+            // menuProduto
+            // 
+            this.menuProduto.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.itemProdutoCadastrar,
+            this.itemProdutoListar});
+            this.menuProduto.Name = "menuProduto";
+            this.menuProduto.Size = new System.Drawing.Size(62, 20);
+            this.menuProduto.Text = "Produto";
+            // 
+            // itemProdutoCadastrar
+            // 
+            this.itemProdutoCadastrar.Name = "itemProdutoCadastrar";
+            this.itemProdutoCadastrar.Size = new System.Drawing.Size(180, 22);
+            this.itemProdutoCadastrar.Text = "Cadastrar";
+            this.itemProdutoCadastrar.Click += new System.EventHandler(this.itemProdutoCadastrar_Click);
+            // 
+            // itemProdutoListar
+            // 
+            this.itemProdutoListar.Name = "itemProdutoListar";
+            this.itemProdutoListar.Size = new System.Drawing.Size(180, 22);
+            this.itemProdutoListar.Text = "Listar";
+            this.itemProdutoListar.Click += new System.EventHandler(this.itemProdutoListar_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,6 +126,9 @@
         private System.Windows.Forms.ToolStripMenuItem itemCategoriaCadastrar;
         private System.Windows.Forms.ToolStripMenuItem itemCategoriaListar;
         private System.Windows.Forms.ToolStripMenuItem itemCategoriaConsultar;
+        private System.Windows.Forms.ToolStripMenuItem menuProduto;
+        private System.Windows.Forms.ToolStripMenuItem itemProdutoCadastrar;
+        private System.Windows.Forms.ToolStripMenuItem itemProdutoListar;
     }
 }
 
